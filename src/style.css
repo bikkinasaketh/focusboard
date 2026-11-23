@@ -41,3 +41,171 @@ button:focus-visible, input:focus-visible, select:focus-visible, textarea:focus-
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { scroll-behavior: auto !important; transition-duration: .01ms !important; animation-duration: .01ms !important; animation-iteration-count: 1 !important; }
 }
+
+
+/* ===== FocusBoard signature theme: Midnight / Violet / Cyan ===== */
+:root {
+  color-scheme: dark;
+  font-family: 'DM Sans', sans-serif;
+  color: #f1efff;
+  background: #111022;
+  font-synthesis: none;
+}
+body {
+  background:
+    radial-gradient(ellipse at 78% 4%, rgba(117, 75, 210, .20), transparent 34%),
+    radial-gradient(ellipse at 8% 92%, rgba(34, 211, 238, .09), transparent 30%),
+    #111022;
+  color: #f1efff;
+}
+.sidebar {
+  background: rgba(22, 20, 43, .96);
+  border-right: 1px solid #302b50;
+  box-shadow: 12px 0 40px rgba(0,0,0,.12);
+}
+.brand { color: #fbfaff; }
+.brandmark {
+  background: linear-gradient(135deg, #9b6cff, #6d4aff);
+  box-shadow: 0 6px 20px rgba(139,92,246,.35);
+}
+.navlabel, .eyebrow { color: #8884aa; }
+.nav { color: #aaa6c5; }
+.nav:hover { background: #292443; color: #e8e2ff; }
+.nav.active {
+  color: #d8c8ff;
+  background: linear-gradient(100deg, rgba(139,92,246,.23), rgba(34,211,238,.07));
+  box-shadow: inset 3px 0 #a78bfa;
+}
+.sidebottom { border-top-color: #302b50; color: #f1efff; }
+.avatar { background: #302650; color: #c4b5fd; }
+.sidebottom small { color: #918ba9; }
+.top h1 { color: #fbfaff; letter-spacing: -.8px; }
+.top h1 span { color: #22d3ee; }
+.top p, .sectionhead p { color: #a19bbd; }
+.primary {
+  color: #fff;
+  background: linear-gradient(120deg, #9b6cff, #7048e8 65%, #5c4de0);
+  box-shadow: 0 8px 24px rgba(124, 82, 230, .30);
+  transition: transform .18s ease, box-shadow .18s ease, filter .18s ease;
+}
+.primary:hover {
+  transform: translateY(-2px);
+  filter: brightness(1.12);
+  box-shadow: 0 12px 28px rgba(124, 82, 230, .40);
+}
+.stat, .tasks-panel, .tip-card {
+  background: linear-gradient(145deg, rgba(34,31,61,.97), rgba(25,23,47,.97));
+  border: 1px solid #383256;
+  box-shadow: 0 12px 35px rgba(0,0,0,.14);
+}
+.stat { transition: transform .18s ease, border-color .18s ease; }
+.stat:hover { transform: translateY(-3px); border-color: #66539a; }
+.staticon.blue { background: #202e50; color: #7dd3fc; }
+.staticon.orange { background: #453047; color: #f0abfc; }
+.staticon.green { background: #173e43; color: #5eead4; }
+.staticon.purple { background: #352650; color: #c4b5fd; }
+.stat span { color: #a49fbd; }
+.stat strong { color: #fbfaff; }
+.sectionhead h2 { color: #fbfaff; }
+.count { color: #c7c1df; background: #302b4c; }
+.tabs button { color: #aaa5c2; }
+.tabs button:hover { color: #fff; background: #30294b; }
+.tabs button.selected {
+  color: #e3d8ff;
+  background: linear-gradient(110deg, #44316f, #29344f);
+}
+.search, .filters select, .task-status-select select, .reset-filter {
+  color: #c8c2df;
+  background: #19172f;
+  border-color: #40395e;
+}
+.search input { color: #f5f2ff; background: transparent; }
+.search input::placeholder { color: #817b9e; }
+.filters select option, .task-status-select select option, .formgrid select option { background: #201d3b; color: #f1efff; }
+.task { border-top-color: #37314f; }
+.tasktitle { color: #f4f1ff; }
+.taskbody p { color: #a29cb9; }
+.category { background: #30294a; color: #c4b5fd; }
+.priority.high { color: #fb8da8; }
+.priority.medium { color: #f5c16c; }
+.priority.low { color: #5eead4; }
+.due { color: #918ba9; }
+.statusdot { color: #777194; }
+.statusdot.isdone { color: #5eead4; }
+.task-status-select select { color: #d6d0ed; }
+.actions button { color: #938cab; }
+.actions button:hover { color: #22d3ee; }
+.empty { color: #a29cb9; }
+.note-card {
+  position: relative;
+  overflow: hidden;
+  border: 1px solid #7255bb;
+  background:
+    radial-gradient(circle at 100% 0%, rgba(34,211,238,.26), transparent 38%),
+    linear-gradient(145deg, #6744b5, #39265f 75%, #242448);
+  box-shadow: 0 16px 36px rgba(87,55,155,.24);
+}
+.note-card::after {
+  content: "";
+  position: absolute;
+  width: 150px; height: 150px;
+  right: -65px; bottom: -75px;
+  border: 1px solid rgba(192,175,255,.20);
+  border-radius: 50%;
+  box-shadow: 0 0 0 18px rgba(192,175,255,.045), 0 0 0 38px rgba(192,175,255,.035);
+  pointer-events: none;
+}
+.note-top { color: #e8ddff; }
+.note-quote { color: #c4b5fd; }
+.note-card p { color: #fff; }
+.note-controls button:hover { color: #67e8f9; }
+.dots button { background: #9380c5; }
+.dots button.on { background: #67e8f9; }
+.tip-card h3 { color: #f4f1ff; }
+.tip-card p { color: #a49fbd; }
+.tip-icon { background: #173e4b; color: #67e8f9; }
+.overlay { background: rgba(7, 6, 18, .78); backdrop-filter: blur(8px); }
+.modal {
+  color: #f4f1ff;
+  background: linear-gradient(145deg, #272341, #1a1830);
+  border: 1px solid #4b426b;
+  box-shadow: 0 25px 80px rgba(0,0,0,.48);
+}
+.modalhead h2 { color: #fbfaff; }
+.modal label { color: #c4bedb; }
+.modal input, .modal textarea, .formgrid select {
+  color: #f4f1ff;
+  background: #17152b;
+  border: 1px solid #494064;
+}
+.modal input::placeholder, .modal textarea::placeholder { color: #817b9e; }
+.modal input:focus, .modal textarea:focus, .formgrid select:focus {
+  border-color: #a78bfa;
+  box-shadow: 0 0 0 3px rgba(167,139,250,.14);
+}
+.modalhead button { color: #b5aecb; }
+.modalhead button:hover { color: #67e8f9; }
+.secondary {
+  color: #d1cbe5;
+  background: #35304e;
+}
+.secondary:hover { background: #443b63; }
+.form-error { color: #fda4af; }
+button:focus-visible, input:focus-visible, select:focus-visible, textarea:focus-visible {
+  outline: 3px solid #67e8f9;
+  outline-offset: 3px;
+}
+.mobile-menu {
+  color: #c4b5fd;
+  background: #24203d;
+  border-color: #494064;
+}
+.mobile-close { color: #c4bedb; }
+.nav-scrim { background: rgba(7,6,18,.72); }
+@media (max-width: 700px) {
+  .sidebar { background: #17152d; border-right-color: #383256; }
+  .sidebar.sidebar-open { box-shadow: 15px 0 45px rgba(0,0,0,.42); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .stat, .primary { transition: none; }
+}
